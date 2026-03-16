@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Order Food</title>
+  </body>
+
+<title>Order Now</title>
+<link rel="order.html" href="order.html">
 </head>
 
 <body>
 
-<h1>Order Your Pizza</h1>
+<h1>Order Details</h1>
 
 <form>
 
-<label>Name:</label><br>
-<input type="text"><br><br>
+<label>Your Name</label><br>
+<input type="text" required><br><br>
 
-<label>Phone:</label><br>
-<input type="number"><br><br>
+<label>Phone Number</label><br>
+<input type="tel" required><br><br>
 
-<label>Address:</label><br>
-<textarea></textarea><br><br>
+<label>Delivery Address</label><br>
+<textarea required></textarea><br><br>
 
-<label>Select Pizza:</label><br>
-<select>
-<option>Veg Pizza</option>
-<option>Chicken Pizza</option>
-<option>Cheese Pizza</option>
-</select><br><br>
+<label>Select Payment Method</label><br>
 
-<button>Place Order</button>
+<input type="radio" name="payment"> Cash on Delivery<br>
+<input type="radio" name="payment"> UPI Payment<br>
+<input type="radio" name="payment"> Credit/Debit Card<br><br>
+
+<button type="submit">Place Order</button>
 
 </form>
 
+</body>
+</html>
+form{
+background:white;
+color:black;
+width:400px;
+margin:auto;
+padding:20px;
+border-radius:10px;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+}
+
+button{
+background:red;
+color:white;
+border:none;
+padding:10px 20px;
+margin-top:10px;
+}
 </body>
 </html>
