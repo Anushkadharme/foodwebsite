@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html>
-  </body>
+<head>
+    <title>Order Page</title>
 
-<title>Order Now</title>
-<link rel="order.html" href="order.html">
+    <style>
+        form {
+            background: white;
+            color: black;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            background: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body>
 
-<h1>Order Details</h1>
+<h2>Order Details</h2>
 
-<form>
+<form onsubmit="placeOrder(event)">
+    <label>Your Name</label>
+    <input type="text" required>
 
-<label>Your Name</label><br>
-<input type="text" required><br><br>
+    <label>Phone Number</label>
+    <input type="text" required>
 
-<label>Phone Number</label><br>
-<input type="tel" required><br><br>
+    <label>Delivery Address</label>
+    <textarea required></textarea>
 
-<label>Delivery Address</label><br>
-<textarea required></textarea><br><br>
+    <h3>Select Payment Method</h3>
+    <input type="radio" name="payment"> Cash on Delivery<br>
+    <input type="radio" name="payment"> UPI Payment<br>
+    <input type="radio" name="payment"> Card<br>
 
-<label>Select Payment Method</label><br>
-
-<input type="radio" name="payment"> Cash on Delivery<br>
-<input type="radio" name="payment"> UPI Payment<br>
-<input type="radio" name="payment"> Credit/Debit Card<br><br>
-
-<button type="submit">Place Order</button>
-
+    <button type="submit">Place Order</button>
 </form>
 
-</body>
-</html>
-form{
-background:white;
-color:black;
-width:400px;
-margin:auto;
-padding:20px;
-border-radius:10px;
+<script>
+function placeOrder(event) {
+    event.preventDefault(); // page reload stop karega
+    alert("Order Placed Successfully ✅");
 }
+</script>
 
-input,textarea{
-width:100%;
-padding:10px;
-margin-top:5px;
-}
-
-button{
-background:red;
-color:white;
-border:none;
-padding:10px 20px;
-margin-top:10px;
-}
 </body>
 </html>
